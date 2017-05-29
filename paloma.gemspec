@@ -3,10 +3,10 @@ Gem::Specification.new do |s|
   s.version     = '5.0.0'
   s.summary     = "Provides an easy way to execute page-specific javascript for Rails."
   s.description = "Page-specific javascript for Rails done right"
-  s.authors     = ['Karl Paragua']
-  s.email       = 'kb.paragua@gmail.com'
+  s.authors     = ['Karl Paragua', 'Gonçalo Morais', 'Sam Jewell']
+  s.email       = ['kb.paragua@gmail.com', 'gnclmorais@gmail.com', 'sam.jewell@gmail.com']
   s.files       = `git ls-files app lib vendor`.split("\n")
-  s.homepage    =  'https://github.com/kbparagua/paloma'
+  s.homepage    = 'https://github.com/gnclmorais/paloma'
   s.license     = 'MIT'
 
   s.add_development_dependency 'jquery-rails'
