@@ -1,3 +1,7 @@
+## 5.0.1
+* Bring in new maintainers to the project.
+* Fix typos.
+
 ## 5.0.0
 * https://github.com/kbparagua/paloma/issues/84 - Easier syntax for creating controllers.
 * https://github.com/kbparagua/paloma/issues/56 - Paloma should be started manually using `Paloma.start()`.
@@ -6,6 +10,7 @@
   - https://github.com/kbparagua/paloma/issues/30
 * Create `controller` and `action` property for Paloma controllers.
 * Remove jQuery dependency.
+
 
 ## 4.2.1
 * https://github.com/kbparagua/paloma/issues/79 - Rendering "true" string fixed.
@@ -27,7 +32,6 @@
 * Paloma hook will be appended using all `render` calls, except for calls that has the following keys `[:json, :js, :xml, :file]`.
 * Restore `Paloma.engine.start()` to start processing queued request.
 
-
 ## 4.0.0
 * https://github.com/kbparagua/paloma/issues/26 - Paloma requests are not saved on `session`.
 * https://github.com/kbparagua/paloma/issues/26 - Chaining with redirect is removed.
@@ -40,12 +44,10 @@
 ## 3.0.2
 * Bug Fix: Converting Rails controller name to singular form.
 
-
 ## 3.0.1
 * Bug Fix: Can't handle Rails controller with Multi-word name.
 * Bug Fix: Paloma Engine is halting when a warning is encountered.
 * Don't create Paloma request if rendering js, json, xml, or file.
-
 
 ## 3.0.0
 * Rewrite Initial Release
