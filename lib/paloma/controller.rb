@@ -6,7 +6,7 @@ module Paloma
 
 
     def initialize
-      self.clear_request
+      clear_request
     end
 
 
@@ -20,12 +20,12 @@ module Paloma
 
 
     def request
-      {:resource => self.resource, :action => self.action, :params => self.params}
+      { resource: resource, action: action, params: params }
     end
 
 
     def has_request?
-      self.resource.present? && self.action.present?
+      resource.present? && action.present?
     end
 
 
