@@ -13,7 +13,7 @@ Page-specific javascript for Rails done right.
 * Easy to understand (*because it is patterned after Rails controller*).
 
 ## Minimum Requirement
-* Rails 3.1 or higher
+* Rails 4.0.2 or higher
 
 ## Quick Example
 
@@ -44,7 +44,7 @@ end
   - Without bundler: `sudo gem install paloma`.
   - With bundler, add this to your Gemfile:
     ```ruby
-    gem 'paloma', '~> 5.0.0'
+    gem 'paloma', '~> 5.1.0'
     ```
 
 1. Require `paloma` in your `application.js`:

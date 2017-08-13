@@ -1,3 +1,7 @@
+## 5.1.0
+* https://github.com/gnclmorais/paloma/pull/1 - Replace depricated `before_filter` with `before_action`.
+* Update dev dependencies, since `before_action` is no available before Rails 4.0.2.
+
 ## 5.0.1
 * Bring in new maintainers to the project.
 * Fix typos.
