@@ -47,12 +47,12 @@ end
     gem 'paloma', '~> 5.1.0'
     ```
 
-1. Require `paloma` in your `application.js`:
+2. Require `paloma` in your `application.js`:
 ```
 //= require paloma
 ```
 
-1. In your layouts, insert Paloma's hook. This is responsible for connecting your ruby code to your javascript code.
+3. In your layouts, insert Paloma's hook. This is responsible for connecting your ruby code to your javascript code.
 
    `application.html.erb`
    ```html
@@ -67,7 +67,7 @@ end
    </html>
    ```
 
-1. Start Paloma to initialize the appropriate controller and execute a certain action. Most of the time this will be inside `document.ready`.
+4. Start Paloma to initialize the appropriate controller and execute a certain action. Most of the time this will be inside `document.ready`.
 
   ```js
   $(document).ready(function(){
