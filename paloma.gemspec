@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake', ['>= 0']
   s.add_development_dependency 'rspec', ['~> 3.4']
   s.add_development_dependency 'rspec-rails', ['~> 3.8']
+  s.add_development_dependency 'selenium-webdriver', ['~> 2.53']
   s.add_development_dependency 'capybara', ['~> 2.2']
   s.add_development_dependency 'jasmine-rails', ['~> 0.4.5']
   s.add_development_dependency 'turbolinks', ['~> 2.2.2']
