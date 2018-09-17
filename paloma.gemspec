@@ -12,10 +12,11 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'jquery-rails'
   s.add_development_dependency 'rails', ['~> 4.0']
   s.add_development_dependency 'rake', ['>= 0']
-  s.add_development_dependency 'rspec', ['>= 0']
-  s.add_development_dependency 'rspec-rails', ['~> 2.0']
-  s.add_development_dependency 'capybara', ['~> 1.0']
+  s.add_development_dependency 'rspec', ['~> 3.4']
+  s.add_development_dependency 'rspec-rails', ['~> 3.8']
+  s.add_development_dependency 'capybara', ['~> 2.2']
   s.add_development_dependency 'jasmine-rails', ['~> 0.4.5']
   s.add_development_dependency 'turbolinks', ['~> 2.2.2']
   s.add_development_dependency 'execjs', ['~> 2.1.0']
+  s.add_development_dependency 'pry-byebug', ['~> 3.6']
 end

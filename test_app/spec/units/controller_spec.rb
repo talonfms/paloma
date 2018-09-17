@@ -6,7 +6,7 @@ describe Paloma::Controller do
   let(:controller){ Paloma::Controller.new }
 
 
-  before do
+  before(:each) do
     controller.resource = 'Test'
     controller.action = 'new'
     controller.params = {:x => 1, :y => 2}
@@ -31,7 +31,7 @@ describe Paloma::Controller do
 
 
     it 'returns true' do
-      expect(@return).to be_true
+      expect(@return).to be true
     end
   end
 
@@ -39,12 +39,12 @@ describe Paloma::Controller do
 
   shared_examples 'request is not cleared' do
     it 'returns false' do
-      expect(@return).to be_false
+      expect(@return).to be false
     end
 
 
     it 'has a request' do
-      expect(controller.has_request?).to be_true
+      expect(controller.has_request?).to be true
     end
   end
 
@@ -86,7 +86,7 @@ describe Paloma::Controller do
     context 'when resource is nil' do
       it 'returns false' do
         controller.resource = nil
-        expect(controller.has_request?).to be_false
+        expect(controller.has_request?).to be false
       end
     end
 
@@ -94,14 +94,14 @@ describe Paloma::Controller do
     context 'when action is nil' do
       it 'returns false' do
         controller.action = nil
-        expect(controller.has_request?).to be_false
+        expect(controller.has_request?).to be false
       end
     end
 
 
     context 'when resource and action is present' do
       it 'returns true' do
-        expect(controller.has_request?).to be_true
+        expect(controller.has_request?).to be true
       end
     end
   end
