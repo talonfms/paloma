@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 2.3.4
+cache:
+  - bundler
+addons:
+  chrome: stable
+  firefox: latest
+env:
+  - RAILS_ENV=development
+before_script:
+  - cd test_app
+script:
+  - bundle exec rake --tasks
+  - bundle exec rake spec:units
+  - bundle exec rake spec:integration
