@@ -4,7 +4,7 @@ TestApp::Application.routes.draw do
 
   root :to => 'main#index'
 
-  resources :main, :controller => 'Main' do
+  resources :main, :controller => 'main' do
     collection do
       get :prevent
       get :basic_params
