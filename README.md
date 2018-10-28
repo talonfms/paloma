@@ -418,7 +418,7 @@ end
 ```
 
 ## Hook
-`insert_paloma_hook` is a helper method that you use in your views to insert Paloma's HTML hook. It is what connects your ruby code to your javascript code. Basically, it contains a javascript code that has embedded ruby in it. That javascript code will register the Rails controller and action to Paloma's engine, then after that it will remove itself from the DOM.
+`insert_paloma_hook` is a helper method that you use in your views to insert Paloma's HTML hook. It is what connects your ruby code to your javascript code. Basically, it contains a javascript code that has embedded ruby in it. That javascript code will register the Rails controller and action to Paloma's engine.
 
 Ideally, you just need to call `insert_paloma_hook` in your layouts, since the layout will always be included in every rendered view. But if you are rendering a view without a layout, make sure to call `insert_paloma_hook` in that view.
 
