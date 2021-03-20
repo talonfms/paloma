@@ -1,0 +1,26 @@
+// This file is automatically compiled by Webpack, along with any other files
+// present in this directory. You're encouraged to place your actual application
+// logic in a relevant structure within app/javascript and only use these pack
+// files to reference that code so it'll be compiled.
+
+import Rails from "@rails/ujs"
+import Turbolinks from "turbolinks"
+
+Rails.start()
+Turbolinks.start()
+
+<%# Get Paloma’s path so we can import each JavaScript file %>
+<% @paloma_gem = Gem.loaded_specs["paloma"].full_gem_path %>
+<% @paloma_js = File.join(@paloma_gem, "vendor", "assets", "javascripts", "paloma") %>
+<% @paloma_js_index = File.join(@paloma_js, "index.js") %>
+
+<%# index.js describes the import order, so we can import in the same manner %>
+<% IO.foreach(@paloma_js_index) do |line| %>
+  import '<%= File.join(@paloma_js, line.split("./").last.strip) %>'
+<% end %>
+
+<%# Import an example controller, logging a message on the browser console %>
+import '../controllers/home.js'
+
+<%# Finally, we start Paloma as normal %>
+document.addEventListener("DOMContentLoaded", Paloma.start);
