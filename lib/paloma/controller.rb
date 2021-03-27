@@ -3,6 +3,9 @@ module Paloma
 
     attr_accessor :resource, :action, :params
 
+    if ::Rails.env.test?
+      attr_reader :request_history
+    end
 
 
     def initialize
@@ -18,6 +21,12 @@ module Paloma
       true
     end
 
+    def save_request_history
+      if ::Rails.env.test?
+        @request_history ||= []
+        @request_history.push(self.request)
+      end
+    end
 
     def request
       { resource: resource, action: action, params: params }
