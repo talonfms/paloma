@@ -422,6 +422,39 @@ end
 
 Ideally, you just need to call `insert_paloma_hook` in your layouts, since the layout will always be included in every rendered view. But if you are rendering a view without a layout, make sure to call `insert_paloma_hook` in that view.
 
+## Testing
+
+A helper module `Paloma::TestHelper` is provided to help with testing parameters passed to javascript in a controller test.
+This module exposes a `js_params` method which returns the set of parameters passed to paloma, which you can then make assertions on.
+
+For example:
+```ruby
+class UsersController
+  def show
+    user = User.find params[:id]
+
+    js :id => user.id, :myParam => 'test'
+  end
+end
+```
+Corresponding test (Minitest):
+```ruby
+# Require test helper
+require "paloma/test_helper"
+
+class UsersControler < ActiveSupport::TestCase
+  # Include helper to access `js_params` method
+  include Paloma::TestHelper
+
+  test "should get show" do
+    user = User.create!
+    get :show, id: user.id
+    
+    expected_params = { id: user.id, myParam: 'test' }
+    assert_equal(expected_params, js_params)
+  end
+end
+```
 
 ## Starting Paloma
 Once Paloma's HTML hook is already executed, you can now start Paloma by calling `Paloma.start()` in your javascript code. First, it will execute the HTML hook if not yet executed, then will initialize the correct Paloma controller, execute any before callbacks, and finally execute the correct action if available.
