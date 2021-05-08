@@ -111,6 +111,8 @@ module Paloma
 
         self.paloma.resource ||= self.default_resource
         self.paloma.action ||= self.default_action
+
+        self.paloma.save_request_history
       end
 
 
