@@ -3,3 +3,7 @@ Gemfile.lock
 /tmp/*
 /test_app/tmp/*
 /test_app/spec/tmp/*
+.bundle/
+config/
+node_modules/
+public/
