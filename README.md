@@ -44,7 +44,7 @@ end
   - Without bundler: `sudo gem install paloma`.
   - With bundler, add this to your Gemfile:
     ```ruby
-    gem 'paloma', '~> 6.0.0'
+    gem 'paloma', '~> 6.1.0'
     ```
 
 2. Require `paloma` in your `application.js`:

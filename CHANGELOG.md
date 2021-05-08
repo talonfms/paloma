@@ -1,3 +1,6 @@
+## 6.1.0
+* https://github.com/gnclmorais/paloma/pull/11 - Thanks to @Martin-Nyaga, we’re introducing a test helpers that will allow users to test that the correct parameters were passed to Paloma.
+
 ## 6.0.0
 * https://github.com/gnclmorais/paloma/pull/7 - Stop removing the Paloma hook. If you are using Paloma with an altered `_hook.html.erb` because of this issue, you might not need those changes anymore. Read more about it on [here](https://github.com/gnclmorais/paloma/pull/7) and [here](https://github.com/kbparagua/paloma/issues/101).
 
